@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="formulario.php" method="post">
+        <fieldset>
+            <legend>Sus datos</legend>
+            <p>
+                <label for="nombre">Nombre y apellidos:</label>
+                <input type="text" maxlength="50" name="nombre" id="nombre">
+            </p>
+            <p>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" maxlength="8" name="contraseña" id="contraseña">
+            </p>
+            <p>
+                <label for="usuario">Usuario:</label>
+                <input type="text" disabled name="usuario" id="usuario" value="Anónimo">
+            </p>
+            <p>
+                <label for="nivel">Nivel:</label>
+            </p>
+            <p>
+                <label for="nivel"></label>
+                <p><input type="radio" name="nivel" id="nivel" value="P">Profesional <br></p>
+                <p><input type="radio" checked name="nivel" id="nivel" value="A">Avanzado<br></p>
+                <p><input type="radio" name="nivel" id="nivel" value="P">Principiante <br></p>
+            </p>            
+        </fieldset>
+        <p>
+            <label for="nacionalidad">Nacionalidad</label>
+            <select name="nacionalidad" id="nacionalidad">
+                <option value="español" selected>Inglés</option>
+                <option value="español" selected>Portugués</option>
+                <option value="español" selected>Francés</option>
+                <option value="español" selected>Español</option>
+            </select>
+        </p>    
+        <p>
+            <label for="descripción">Descripción</label>
+            <textarea name="descripción" id="descripción" cols="30" rows="4"></textarea>
+        </p>
+        <p>
+            <label for="información"></label>
+            <input type="checkbox" checked name="informacion" id="informacion" value="D">Deseo recibir información sobre novedades y ofertas<br>
+        </p>   
+        <p>
+            <label for="declaración"></label>
+            <input type="checkbox" name="declaración" id="declaración" value="D">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de daots<br>
+        </p>
+        <p>
+            <label for="foto">Adjuntar fotografía</label>
+            <input type="file" name="foto" id="foto">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar datos">
+        </p>
+    </form>
+</body>
+</html>
